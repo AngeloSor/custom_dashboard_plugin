@@ -1,9 +1,10 @@
-# The name of the panel to be added to HORIZON_CONFIG. Required.
-PANEL = 'commit_panel'  # deve corrispondere allo "slug" del tuo pannello
-# The name of the dashboard the PANEL is associated with. Required.
+# Lo slug deve corrispondere a quello definito in commit_panel.py
+PANEL = 'commit_panel'
+# Specifica il dashboard in cui vuoi che appaia (usa lo slug, in questo caso 'project')
 PANEL_DASHBOARD = 'project'
-# The name of the panel group the PANEL is associated with (opzionale se non usi gruppi).
+# Se non usi gruppi particolari, puoi usare 'default'
 PANEL_GROUP = 'default'
-
-# Python panel class of the PANEL to be added.
+# Percorso completo alla classe del pannello
 ADD_PANEL = 'custom_dashboard_plugin.panels.commit_panel.CommitPanel'
+# IMPORTANTISSIMO: Registra anche le URL del plugin
+ADD_URLS = 'custom_dashboard_plugin.urls'
